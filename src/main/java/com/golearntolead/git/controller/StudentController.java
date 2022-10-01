@@ -10,8 +10,8 @@ import java.util.List;
 @RestController
 public class StudentController {
 
-    @Autowired
-    private StudentService studentService;
+
+     StudentService studentService = new StudentService();
 
     @GetMapping("/getStudents")
     public List<Student> getStudents(){

@@ -3,19 +3,15 @@ package com.golearntolead.git.service;
 import com.golearntolead.git.entity.Student;
 import com.golearntolead.git.exception.StudentNotFoundException;
 import com.golearntolead.git.repository.StudentRepository;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-
-@Service
 public class StudentService {
 
-    @Autowired
-    private StudentRepository studentRepository;
 
-    private List<Student> STUDENTS = studentRepository.studentDB();
+     StudentRepository studentRepository = new StudentRepository();
+
+     List<Student> STUDENTS = studentRepository.studentDB();
 
 
     public List<Student> getAllStudentDetails() {
