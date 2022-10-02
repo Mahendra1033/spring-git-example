@@ -33,11 +33,4 @@ public class StudentController {
         return studentService.deleteById(id);
     }
     
-    public String toTestConflict(){
-        return "Testing the conflict in git";
-    }
-
-    public String updateStudent(){
-        return "Student has been added in to the database";
-    }
 }
