@@ -32,4 +32,8 @@ public class StudentController {
     public String deleteById(@PathVariable("id") long id){
         return studentService.deleteById(id);
     }
+     
+     public String toTestConflict(){
+          return "Testing the conflict in git";
+     }
 }
