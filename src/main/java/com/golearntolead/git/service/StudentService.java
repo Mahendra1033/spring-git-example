@@ -3,6 +3,7 @@ package com.golearntolead.git.service;
 import com.golearntolead.git.entity.Student;
 import com.golearntolead.git.exception.StudentNotFoundException;
 import com.golearntolead.git.repository.StudentRepository;
+import com.golearntolead.git.response.ResponseData;
 
 import java.util.List;
 
@@ -14,8 +15,14 @@ public class StudentService {
      List<Student> STUDENTS = studentRepository.studentDB();
 
 
-    public List<Student> getAllStudentDetails() {
-        return STUDENTS;
+    public List<ResponseData> getAllStudentDetails() {
+        ResponseData responseData = new ResponseData();
+        for(int i=0; i<STUDENTS.size(); i++) {
+            responseData.setStudentId(STUDENTS.get(i).getStudentId());
+            responseData.setStudentRank(STUDENTS.get(i).getStudentRank());
+            responseData.setStudentName(STUDENTS.get(i).getStudentName());
+        }
+        return (List<ResponseData>) responseData;
     }
 
     public Student getStudentById(long id) {
