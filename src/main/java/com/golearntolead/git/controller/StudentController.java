@@ -1,8 +1,8 @@
 package com.golearntolead.git.controller;
 
 import com.golearntolead.git.entity.Student;
+import com.golearntolead.git.response.ResponseData;
 import com.golearntolead.git.service.StudentService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -14,7 +14,7 @@ public class StudentController {
      StudentService studentService = new StudentService();
 
     @GetMapping("/getStudents")
-    public List<Student> getStudents(){
+    public List<ResponseData> getStudents(){
         return studentService.getAllStudentDetails();
     }
 
