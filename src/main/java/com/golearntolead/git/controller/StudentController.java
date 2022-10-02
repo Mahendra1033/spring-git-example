@@ -32,4 +32,8 @@ public class StudentController {
     public String deleteById(@PathVariable("id") long id){
         return studentService.deleteById(id);
     }
+
+    public String updateStudent(){
+        return "Student has been added in to the database";
+    }
 }
