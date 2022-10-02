@@ -33,6 +33,10 @@ public class StudentController {
         return studentService.deleteById(id);
     }
 
+    public String updateStudent(){
+        return "Student has been updated";
+    }
+
      public String toTestConflict(){
           return "Testing the conflict in git";
      }
