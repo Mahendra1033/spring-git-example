@@ -29,8 +29,12 @@ public class StudentController {
     }
 
     @DeleteMapping("/deleteById/{id}")
-    public String deleteById(@PathVariable("id") long id){
+    public String deleteById(@PathVariable("id") long id) {
         return studentService.deleteById(id);
+    }
+    
+    public String toTestConflict(){
+        return "Testing the conflict in git";
     }
 
     public String updateStudent(){
